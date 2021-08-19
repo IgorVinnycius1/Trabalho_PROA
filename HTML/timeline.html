@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline do Igão</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    img{
+        width: 400px;
+    }
+
+    h2{
+        margin: auto;
+        padding: auto;
+        color: white;
+        margin: auto;
+        width: 50%;
+        padding: 20px;
+    }
+
+    /* Set a background color */
+    body {
+        background-color: dodgerblue;
+        font-family: Helvetica, sans-serif;
+    }
+
+    /* The actual timeline (the vertical ruler) */
+    .timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* The actual timeline (the vertical ruler) */
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: white;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+    }
+
+    /* Container around content */
+    .container {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+    }
+
+    /* The circles on the timeline */
+    .container::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -17px;
+        background-color: white;
+        border: 4px solid #FF9F55;
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    /* Place the container to the left */
+    .left {
+        left: 0;
+    }
+
+    /* Place the container to the right */
+    .right {
+        left: 50%;
+    }
+
+    /* Add arrows to the left container (pointing right) */
+    .left::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        right: 30px;
+        border: medium solid white;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent white;
+    }
+
+    /* Add arrows to the right container (pointing left) */
+    .right::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    /* Fix the circle for containers on the right side */
+    .right::after {
+        left: -16px;
+    }
+
+    /* The actual content */
+    .content {
+        padding: 10px 30px;
+        background-color: white;
+        position: relative;
+        border-radius: 6px;
+        color: black;
+    }
+
+    .content h2{
+        color: black;
+        margin: auto;
+        text-align: center;
+    }
+
+    /* Media queries - Responsive timeline on screens less than 600px wide */
+    @media screen and (max-width: 600px) {
+
+        /* Place the timelime to the left */
+        .timeline::after {
+            left: 31px;
+        }
+
+        /* Full-width containers */
+        .container {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+        }
+
+        /* Make sure that all arrows are pointing leftwards */
+        .container::before {
+            left: 60px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        /* Make sure all circles are at the same spot */
+        .left::after,
+        .right::after {
+            left: 15px;
+        }
+
+        /* Make all right containers behave like the left ones */
+        .right {
+            left: 0%;
+        }
+
+        img{
+            width: 300px;
+        }
+    }
+</style>
+
+<body>
+    <h2>Timeline de Filmes, Desenhos e Séries</h2>
+    <div class="timeline">
+        <div class="container left">
+            <div class="content">
+                <h2>2008</h2>
+                <p>os sete monstrinhos</p>
+                <img width="400px" src="https://trecobox.com.br/wp-content/uploads/2017/04/os-sete-monstrinho.jpg" alt="">
+                <br>
+                <p>Cocoricó</p>
+                <img width="400px" src="https://imagens.ne10.uol.com.br/veiculos/_midias/jpg/2020/06/11/806x444/1_20200611114225_cocoric_-8190396.jpg" alt="">
+                <br>
+                <p>Pingu</p>
+                <img width="400px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQEDnTiPRbP9-i7U4qzBY97WD44IxiJzsRQw&usqp=CAU" alt="">
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h2>2009</h2>
+                <p>vila sésamo</p>
+                <img src="http://cultura.estadao.com.br/blogs/cristina-padiglione/wp-content/uploads/sites/109/2014/10/s%C3%A9samo.jpg" alt="">
+                <p>backyardigans</p>
+                <img src="https://observatoriodocinema.uol.com.br/wp-content/uploads/2021/03/backyardigans-divulgacao.jpg" alt="">
+                <p>Caillou</p>
+                <img src="https://hqscomcafe.com.br/wp-content/uploads/2018/02/caillou-800x445.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <h2>2010</h2>
+                <p>arthur</p>
+                <img src="https://i.kym-cdn.com/entries/icons/original/000/023/308/Screen_Shot_2017-06-27_at_2.10.37_PM.png" alt="">
+                <p>doug</p>
+                <img src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/04264b739768627e0cbc301d7ed103e08d82f96c1cc30bdd54efadfa75c3d413._RI_V_TTW_.jpg" alt="">
+                <p>hey arnold</p>
+                <img src="https://hqscomcafe.com.br/wp-content/uploads/2016/11/heyarnold-1-800x445.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h2>2011</h2>
+                <p>Naruto</p>
+                <img src="https://animezeira.site/wp-content/uploads/2019/02/1304.jpg" alt="">
+                <p>Liga da Justiça</p>
+                <img src="http://1.bp.blogspot.com/-p_5dANOiyO4/TyYCXMpWguI/AAAAAAAACDI/-q0kFi2mckM/s1600/Liga+da+Justica.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <h2>2012</h2>
+                <p>Todo Mundo odeia o Chris</p>
+                <img src="https://www.proibidoler.com/wp-content/uploads/2020/11/curiosidades-sobre-todo-mundo-odeia-o-chris-01.jpg" alt="">
+                <p>jimmy neutron</p>
+                <img src="http://s2.glbimg.com/tpIMWw1g-L6IlDCj9YhPZjwVmgw=/s.glbimg.com/og/rg/f/original/2013/06/21/cast-of-the-adventures-of-j.jpg" alt="">
+                <p>winx</p>
+                <img src="https://www.recreio.com.br/images/large/2021/01/22/clube-das-winx-1226921.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h2>2013</h2>
+                <p>ryukendo</p>
+                <img src="https://i.ytimg.com/vi/DUUkOr8xmDE/hqdefault.jpg" alt="">
+                <p>icarly</p>
+                <img src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/4b821434d907e801f0772358df88418a9e9c50776b19872b1f26156ca13d9aeb._RI_V_TTW_.jpg" alt="">
+                <p>Scooby Doo</p>
+                <img src="https://www.opovo.com.br/_midias/jpg/2020/10/01/750x500/1_scooby_doo-13683847.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <h2>2014</h2>
+                <p>doctor who</p>
+                <img src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/6cc7bf7b45a35ac1fce6c27005cbd004921db534fc5a9d53026c6501643edf67._RI_V_TTW_.jpg" alt="">
+                <p>super onze</p>
+                <img src="https://ottvsimg.ottvs.com.br/ban/tlx.058508/looke_1010_670.jpg" alt="">
+                <p>castelo ra tim bum</p>
+                <img src="https://noticiasdatv.uol.com.br/media/_versions/castelo_ra_tim_bum_personagens_fixed_large.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h2>2015</h2>
+                <p>caçadores de mitos</p>
+                <img src="https://sala313.files.wordpress.com/2015/01/mythbusters-5047b7930a515.png" alt="">
+                <p>casa monstro</p>
+                <img src="https://interprete.me/wp-content/uploads/2019/03/a-casa-monstro-netflix-monster-house-animacao-terror-infantil-halloween-700x361.jpg" alt="">
+                <p>banda djavu</p>
+                <img src="https://i.ytimg.com/vi/TRoO2cUEKsE/maxresdefault.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <h2>2016</h2>
+                <p>How I met your Mother</p>
+                <img src="https://cdn.folhape.com.br/upload/dn_arquivo/2021/06/himym.jpg" alt="">
+                <p>Death Note</p>
+                <img src="https://kanto.legiaodosherois.com.br/w728-h381-gnw-cfill-gcc-f:fbcover/wp-content/uploads/2021/02/legiao_VZNLpXRIMn_3.jpg.jpeg" alt="">
+                <p>Madagascar</p>
+                <img src="https://www.4oito.com.br/img/noticias/madagascar-4oito_14748.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h2>2017</h2>
+                <p>Quatro vidas de um cachorro</p>
+                <img src="https://livrosfilmes2017.files.wordpress.com/2017/08/quatro-vidas-cachorro-4.jpg" alt="">
+                <p>La casa de papel</p>
+                <img src="https://img.ibxk.com.br/2021/08/02/02112359593116.jpg" alt="">
+                <p>Até o último homem</p>
+                <img src="https://nova-acropole.org.br/wp-content/uploads/2020/02/ultimo_homem1-681x575.jpg" alt="">
+                <p>Extraordinário</p>
+                <img src="https://br.web.img2.acsta.net/pictures/17/11/28/18/32/3262971.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <h2>2018</h2>
+                <p>Black Mirror</p>
+                <img src="https://occ-0-1723-92.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABUb8y4ccuEVy561Cyng-U7DYPnvBSEtASh7jutgnPDpIpjLmnSW3ke7syU6UCS9XFi9WbJ3PDfMRN3qwuzCP6iTlMTnB.jpg?r=72c" alt="">
+                <p>God's not dead</p>
+                <img src="https://3.bp.blogspot.com/-6jhbaX_fjv0/VxLyN9NAl5I/AAAAAAAAD1k/f_AY2H8KRbU3Uj5MSsMwHVEsyIbYWG64ACLcB/s1600/Deus%2Bn%25C3%25A3o%2Best%25C3%25A1%2Bmorto.jpg" alt="">
+                <p>Vingadores Guerra Infinita</p>
+                <img src="https://s2.glbimg.com/S7FJgGNQZ5TorW_xdxoMYmpIhHY=/e.glbimg.com/og/ed/f/original/2018/04/26/vingadores-guerra-infinita.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h2>2019</h2>
+                <p>Vingadores Ultimato</p>
+                <img src="https://lumiere-a.akamaihd.net/v1/images/690x0w_br_9e5801a5.jpeg?region=0%2C0%2C690%2C1035" alt="">
+                <p>stranger things</p>
+                <img src="https://cinepop.com.br/wp-content/uploads/2019/10/stranger-things-1-696x391.jpg" alt="">
+                <p>Quarto de Guerra</p>
+                <img src="https://gabrieldossantosdotcom.files.wordpress.com/2016/01/quartodeguerra-e1453390517326.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <h2>2020</h2>
+                <p>Anne with an "e"</p>
+                <img src="https://br.web.img2.acsta.net/pictures/19/11/26/09/09/5380589.jpg" alt="">
+                <p>Dark</p>
+                <img src="https://dark.netflix.io/share/global.png" alt="">
+                <p>Corajosos</p>
+                <img src="https://br.web.img3.acsta.net/medias/nmedia/18/95/49/84/20409028.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h2>2021</h2>
+                <p>Você acredita?</p>
+                <img src="https://br.web.img3.acsta.net/pictures/15/06/19/15/45/165329.jpg" alt="">
+                <p>Bridgerton</p>
+                <img src="https://br.web.img3.acsta.net/pictures/20/11/04/11/32/4052345.jpg" alt="">
+                <p>Sweet Tooth</p>
+                <img src="https://br.web.img3.acsta.net/pictures/21/05/17/17/26/5007043.jpg" alt="">
+                <p>A week Away</p>
+                <img src="https://m.media-amazon.com/images/M/MV5BOTFmZTczNjUtNDk0Mi00NGI2LTliNmItYzg5MmY4YTk1NmNmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" alt="">
+                <p>Lupin</p>
+                <img src="https://br.web.img3.acsta.net/pictures/20/12/02/16/22/0450183.jpg" alt="">
+                <p>Faith, Hope & Love</p>
+                <img src="https://i.ytimg.com/vi/CbiVRYDCKDU/maxresdefault.jpg" alt="">
+                <p>Música - Holy Spirit - Jesus Culture </p>
+                <img src="https://i.ytimg.com/vi/FPII24yO4p8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBbwEALIeuIZilFjyAYpfdtWbAkkA" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

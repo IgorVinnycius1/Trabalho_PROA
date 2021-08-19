@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Igor Vinnycius</title>
+</head>
+<style>
+    .Titulo1 {
+        font-size: 60px;
+    }
+
+    div.gallery {
+        border: 1px solid #ccc;
+    }
+
+    div.gallery:hover {
+        border: 1px solid #777;
+    }
+
+    div.gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    div.desc {
+        padding: 15px;
+        text-align: center;
+    }
+
+    * {
+        box-sizing: border-box;
+        color: white;
+        margin: auto;
+        font-family: Verdana;
+    }
+
+    .responsive {
+        padding: 0 6px;
+        float: left;
+        width: 24.99999%;
+        background-color: dodgerblue;
+    }
+
+    td {
+        padding: 10px;
+    }
+
+    h2 {
+        margin: auto;
+    }
+
+    li {
+        font-size: 20px;
+    }
+
+    .Apresentacao {
+        font-size: 15px;
+        }
+
+    .TituloGaleria {
+        margin: auto;
+        padding: 50px;
+        font-size: 40px;
+    }
+
+    .inicio {
+        padding: 50px;
+        margin: auto;
+        background-image: url('https://lh3.googleusercontent.com/jUE7u7L04s0_SxoudV4N07C5vc8S-6q-lI6TwQWGkY1cocq4TIp_X3jSFF5AEbhRb5G4W9keiFQbdqzPBiaBA7xWoaMT1s4vVW3YlqoQnmOKfTkW6oPClETmKnBD2weHu8s9ojbjf1T2aemECdxGoznp2V-TBegR3-gC2yC-88eeFYOU377oFIlSyHbNM4GDn6UKwpDQI1HUFywC3oAOMfrh9muAIJv9WvDLXuyzOZdXXfmSXlyYVWZWbByIMDvcOmg-4kiQZ4_SYI2y1J279encCsxgkqLuFTE3SH3LaLJIw8hu7D6SKBsay14y8fZqJbWb8mfMRJBlj3HtFEhNOXE-vX01NlMSsev33vP-der8gpuMHnOd-sHv0ocdgGVHnlNkmd7wZE1yAUgeyQyCgU6yzQJ68QOvGmcmNc0PUJtBKT_wNt-mBoivX6zyKQLV_2JDRJcfVS0dcyQYkXK-w1ovGDseY-q53QFFrbmC499P-2ugBlEle_scVSZTucDIVJVQnBeW5CU-DGGNECq7AYv7AA9AcXZsRtId2gsXswh5dF3PR6Q9WhGQO7fmH6F9gETPsr_hFiM2pWT_HC5Xfcg3QiV825_XS-aDTilqRAlP0FicLAXx2tSfukUcKfgBg5q6dBurYiW-iB7yniYyDUwObeL-uJWRFZZwPt4HS-uJ4xpe7-YNNMQ1uwtRvtlpYV76HP2djWsJuJ2rnhHjfIiZ=w530-h220-no?authuser=0');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .Content {
+        background-color: dodgerblue;
+    }
+
+    .tituloReceitas {
+        margin-top: auto;
+        padding: auto;
+    }
+
+    .receitas {
+        background-color: darkcyan;
+        padding: 6px;
+    }
+
+    .linhaDoTempo {
+        background-color: rgb(6, 78, 126);
+        margin: auto;
+        padding: auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    button {
+        background-color: dodgerblue;
+        border: 2px solid dodgerblue;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        opacity: 0.6;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        opacity: 1;
+        color: dodgerblue;
+        background-color: white;
+    }
+
+    @media only screen and (max-width: 700px) {
+        .responsive {
+            width: 49.99999%;
+            margin: 6px 0;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .responsive {
+            width: 100%;
+            background-color: dodgerblue;
+        }
+    }
+
+    .clearfix:after {
+        display: table;
+        clear: both;
+    }
+
+    .navbar {
+        overflow: hidden;
+        background-color: rgb(20, 85, 150);
+        position: fixed;
+        /* Set the navbar to fixed position */
+        top: 0;
+        /* Position the navbar at the top of the page */
+        width: 100%;
+        /* Full width */
+    }
+
+    /* Links inside the navbar */
+    .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    /* Change background on mouse-over */
+    .navbar a:hover {
+        background: #ddd;
+        color: black;
+        transition: 0.5s;
+    }
+</style>
+<header>
+    <div class="navbar">
+        <a href="inicio.html">Home</a>
+        <a href="futuro.html">Futuro</a>
+        <a href="trabalho.html">Trabalho</a>
+        <a href="Hobbies.html">Hobbies</a>
+    </div>
+</header>
+
+<body>
+    <div class="inicio">
+        <br>
+        <h1 class="Titulo1">Um pouco de mim</h1>
+        <br>
+        <h2>Apresentação</h2>
+        <p class="Apresentacao">Olá, eu me chamo Igor Vinnycius, sou um garoto de 17 anos, Cristão, morador de Guarulhos
+            desde pequeno, amo muitos lugares de São Paulo, tanto que já pensei em fazer histórias sobre esses lugares,
+            mas até agora só tenho ideias em mente. Estudo na Etec de Guarulhos, e agora no PROA também!! uhuuuu! graças
+            a Deus! Amo programar, gosto muito de front-end. Amo jogar também, mas no momento estou jogando mais jogos
+            leves pois meu pc não roda coisas pesadas. Quero me tornar um profissional nessa área, quem sabe até
+            trabalhar com o front-end mesmo ou até o back-end, amo dublagens, amo designs, amo contemplar a natureza, o
+            céu, as estrelas, acho os detalhes da natureza maravilhosos. </p>
+        <br><br>
+
+        <p style="font-weight: bold; font-size: large;">3 coisas importantes sobre mim</p>
+        <br>
+        <ol>
+            <li>
+                Penso que pelo fato de eu ser cristão já dá para saber um pouco de mim kkkkk
+            </li>
+            <br>
+            <li>
+                Amo ter companhia, para conversar, jogar conversa fora, falar sobre filmes, séries, jogos, até novelas
+                kkkkk, se bem que não assisto muito
+            </li>
+            <br>
+            <li>
+                Amo dublagens, de verdade, amo mesmo, acho incrível esse trabalho. Atuar é muito legal e interessante,
+                queria aprender um dia.
+            </li>
+        </ol>
+        <br>
+    </div>
+    <div class="Content">
+        <div class="TituloGaleria">
+            <h2>Galeria</h2>
+            <h4>Algumas fotinhas que até que não estão tão ruim assim kkkk</h4>
+        </div>
+        <div>
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank"
+                        href="https://lh3.googleusercontent.com/lM3us9zNgA2GUhdVTywdOf0vrFJvcHu_ykupWinxukkY26Y8Xi9DeY6wnOl9JLqdl_cCQmJ_IzJFJ07v4LSqYvKsRfIJf1eVxpK7aLI0CodpB-YFO9aXe75WhqybXy_ZdPAHkR-L6Pur3RUOUN62G0QUDy6UgczPcGJRbzRjP2V-IDIh4qcyd8QEQY1byfbjc36UXy029bP3kivqqOX3RbJezMOuXA1w3uq0o-TT4DwUbq53KrDVpp__Wlcw2J9yNwISr2EsSc4vK5Y-q7Thg-xqbP5SXsTHt5278ObtgVLrL6vmOLh2ShGtTWqXUZgIcGWtNaWGC5Fg3coQ4HHtOdkXkIBXCgScNkEKE2JlAUj9eysSPmbkSxVzN-h6HhBzvF0cfoqSkSy3n5CvvxqCmIb-T9D1FVaIfv_XaTgkzSRsl1LRw3Z6W7vLWm3uck9BD_YtqFH6DU2MFV9haX-86MyJV0Bm4FETdaMfEtrywqHZiGWrC_iip58RHwoyFC355MblJQ2YtZoXNYtKD7C9SfY0Lgd0GChZccUqFZhwFBf_OpZzmbigHO-O_etGEPHFC7m4v9jB75QIVt_avEadZQwL_ngotJUC_NblijqrnMI3aSCON9n2ijaNGbXw4CbwcTcOp_RmcE2Dq6IhT4uac-tzr3I7FpQZkywZ1unjxPTwV2DqWFZTZKjLeINXJJp-JeEvNDaGe5iUkpfHCSiQMQnd=w1024-h768-no?authuser=0">
+                        <img src="https://lh3.googleusercontent.com/lM3us9zNgA2GUhdVTywdOf0vrFJvcHu_ykupWinxukkY26Y8Xi9DeY6wnOl9JLqdl_cCQmJ_IzJFJ07v4LSqYvKsRfIJf1eVxpK7aLI0CodpB-YFO9aXe75WhqybXy_ZdPAHkR-L6Pur3RUOUN62G0QUDy6UgczPcGJRbzRjP2V-IDIh4qcyd8QEQY1byfbjc36UXy029bP3kivqqOX3RbJezMOuXA1w3uq0o-TT4DwUbq53KrDVpp__Wlcw2J9yNwISr2EsSc4vK5Y-q7Thg-xqbP5SXsTHt5278ObtgVLrL6vmOLh2ShGtTWqXUZgIcGWtNaWGC5Fg3coQ4HHtOdkXkIBXCgScNkEKE2JlAUj9eysSPmbkSxVzN-h6HhBzvF0cfoqSkSy3n5CvvxqCmIb-T9D1FVaIfv_XaTgkzSRsl1LRw3Z6W7vLWm3uck9BD_YtqFH6DU2MFV9haX-86MyJV0Bm4FETdaMfEtrywqHZiGWrC_iip58RHwoyFC355MblJQ2YtZoXNYtKD7C9SfY0Lgd0GChZccUqFZhwFBf_OpZzmbigHO-O_etGEPHFC7m4v9jB75QIVt_avEadZQwL_ngotJUC_NblijqrnMI3aSCON9n2ijaNGbXw4CbwcTcOp_RmcE2Dq6IhT4uac-tzr3I7FpQZkywZ1unjxPTwV2DqWFZTZKjLeINXJJp-JeEvNDaGe5iUkpfHCSiQMQnd=w1024-h768-no?authuser=0"
+                            alt="foto é a mais recente" width="600" height="400">
+                    </a>
+                    <div class="desc">Essa foto é a mais recente</div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank"
+                        href="https://lh3.googleusercontent.com/X98nETzxYEuNFzpnXx7B92NBwT1RW70mRGkwoagZhCj2Vpq3VYj7yJlxip4aApBYBqNRdMkKMKU1P0l-KFena4_B2PnQqVwmwYBdVDCjFWyi_H5G_t_dOEPtqGvnAz4buuo9OVg_dLkIdNcrZ13bwYyn11DJb796WEX1wjUKodKRRQHf8JdoVpWE19sO4zIUZn-C1aIwIhRU8ub-RvNZPn30bYAMyux5bWxNQZ61bJ5lU-dPG7EZ9ZMdx1QGfNQWx18h7OmyKeAxBk-PhrEryOrNsVVIIBYAglckR6nTeUGfflJgJXTuk2bkI27z5Nig5XDyW7E4JrPCV_zS1WLZ7Tzp_7UWzlR5hYlSYJGpNyddnbyBI2kphIcTh2ukGcDa6JSJQlIqJ16Z-fh7Wb8R7InBlct0zslUyKEyiOsKidNq7W30UJCYFbQEjnpoYEFTJQAPFwSsrBfze5KEsHuNRHmtdxY-80aMEXQtDkLBzTC6jfHmi_9fIbngaXrZjV2dgL4-W20RHP6bm3AnvSCdcN_3IalLD-qsDiFNKiFriDLXW23UJ5w_-9zXq4K2JqI4YcdaUjdmjkrfW7UTTkvbrELIwIFeY7wGGXEwUC8nt50Su0IPAwRfbwkFSDPcPBfuNNrjgXk7N8Co5WW68k9fnqlOs4dAilcQqf6FvDuW9GaU0uSTnHJzACQ6osxgprk_Kv9u62unSUbcxfBF31u7sQ5J=w1024-h768-no?authuser=0">
+                        <img src="https://lh3.googleusercontent.com/X98nETzxYEuNFzpnXx7B92NBwT1RW70mRGkwoagZhCj2Vpq3VYj7yJlxip4aApBYBqNRdMkKMKU1P0l-KFena4_B2PnQqVwmwYBdVDCjFWyi_H5G_t_dOEPtqGvnAz4buuo9OVg_dLkIdNcrZ13bwYyn11DJb796WEX1wjUKodKRRQHf8JdoVpWE19sO4zIUZn-C1aIwIhRU8ub-RvNZPn30bYAMyux5bWxNQZ61bJ5lU-dPG7EZ9ZMdx1QGfNQWx18h7OmyKeAxBk-PhrEryOrNsVVIIBYAglckR6nTeUGfflJgJXTuk2bkI27z5Nig5XDyW7E4JrPCV_zS1WLZ7Tzp_7UWzlR5hYlSYJGpNyddnbyBI2kphIcTh2ukGcDa6JSJQlIqJ16Z-fh7Wb8R7InBlct0zslUyKEyiOsKidNq7W30UJCYFbQEjnpoYEFTJQAPFwSsrBfze5KEsHuNRHmtdxY-80aMEXQtDkLBzTC6jfHmi_9fIbngaXrZjV2dgL4-W20RHP6bm3AnvSCdcN_3IalLD-qsDiFNKiFriDLXW23UJ5w_-9zXq4K2JqI4YcdaUjdmjkrfW7UTTkvbrELIwIFeY7wGGXEwUC8nt50Su0IPAwRfbwkFSDPcPBfuNNrjgXk7N8Co5WW68k9fnqlOs4dAilcQqf6FvDuW9GaU0uSTnHJzACQ6osxgprk_Kv9u62unSUbcxfBF31u7sQ5J=w1024-h768-no?authuser=0"
+                            alt="Festinha de niver na escola" width="600" height="400">
+                    </a>
+                    <div class="desc">Festinha de niver na escola</div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank"
+                        href="https://lh3.googleusercontent.com/m6Ri9vJxWKvXAuSYOF8iWMkUG4NU8mEllnFCCakM96Paiqy3jJOZXotlxIh-_21T3ivoLrcQTtE6xEnHA5tHsVztkAvayZ5SABi_SGpz0rP8TJr2eF4Y-4wr0TDwLo5c9LT7itlCsWIBfOeh6GlflxZBSBlwuepJkZlMn13NE1Kb9C6bdVF6SelUmJ3fKvbdlAihHnmoZuVrIgjfkXw3nTshQYE_Cd0ntmqfF6XUUbFdLOApsIMeWEU_OQJWyRykDXaDQZccuYMcTGtdkhSwWRiWLUC7hQoR9DQUjMv6IRrcYtYeruEMH8P8Bx4JyB_O-tJ_2UktJRyX0lHhiVFhQilwM_xevpCIJ8bPNhFMRwGjOu1iwyLyRWKWILdNVuu9UT4-cUAFuRzXlE6gWUqoTY4zlGYLfcr3ExrTo2HE_RLQQ5e7XM4ffdtZIVQktwtNVdkrkbYKkCqEM64qJ4GQDBAYBl3-E9xSgxnlXnO2d8iGm6Q0iwDecAVjbbHkmT1UQX8S8lpzNFLlT_aY4o8eiWZrZAPJCPVtucm3Wmk9NK-srFITH_oPZ3VFHRWuNlzigHrZ5iky6psDemYUfB1nVkTqat4xjyAwGuubujOY8vyfZGON0DS9t1wgwnnrDtSaw_eCs-5c9PrFB6LcwGqds1hNP98LinOIFuBU0CJ-eAPOblZJhmxuqCe0tN6rtfR1DOx5i2ub5n0ZbdH3J-ScXRQ9=w1024-h768-no?authuser=0">
+                        <img src="https://lh3.googleusercontent.com/m6Ri9vJxWKvXAuSYOF8iWMkUG4NU8mEllnFCCakM96Paiqy3jJOZXotlxIh-_21T3ivoLrcQTtE6xEnHA5tHsVztkAvayZ5SABi_SGpz0rP8TJr2eF4Y-4wr0TDwLo5c9LT7itlCsWIBfOeh6GlflxZBSBlwuepJkZlMn13NE1Kb9C6bdVF6SelUmJ3fKvbdlAihHnmoZuVrIgjfkXw3nTshQYE_Cd0ntmqfF6XUUbFdLOApsIMeWEU_OQJWyRykDXaDQZccuYMcTGtdkhSwWRiWLUC7hQoR9DQUjMv6IRrcYtYeruEMH8P8Bx4JyB_O-tJ_2UktJRyX0lHhiVFhQilwM_xevpCIJ8bPNhFMRwGjOu1iwyLyRWKWILdNVuu9UT4-cUAFuRzXlE6gWUqoTY4zlGYLfcr3ExrTo2HE_RLQQ5e7XM4ffdtZIVQktwtNVdkrkbYKkCqEM64qJ4GQDBAYBl3-E9xSgxnlXnO2d8iGm6Q0iwDecAVjbbHkmT1UQX8S8lpzNFLlT_aY4o8eiWZrZAPJCPVtucm3Wmk9NK-srFITH_oPZ3VFHRWuNlzigHrZ5iky6psDemYUfB1nVkTqat4xjyAwGuubujOY8vyfZGON0DS9t1wgwnnrDtSaw_eCs-5c9PrFB6LcwGqds1hNP98LinOIFuBU0CJ-eAPOblZJhmxuqCe0tN6rtfR1DOx5i2ub5n0ZbdH3J-ScXRQ9=w1024-h768-no?authuser=0"
+                            alt="Charmander é legal" width="600" height="400">
+                    </a>
+                    <div class="desc">Professor, o charmander é legal</div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank"
+                        href="https://lh3.googleusercontent.com/2Xdqf9OxpVEGN-utMwo_EQtItHtsqO02XfDSkerIRRkBBW1WyFuqmZsBRyWFooTbkFMD29P2HtuzCwVKl3axL3AmPJD-oQqZmXRq_7QeU3Gvqk2JVj3Ma2-14tgtzOa1KHBa0udOy1r8mRSSgjtz9c3K-ZeQODRTA9WiZ1cZGhDu-bv2GtEG6Ii5MSfKjvEtZRub4H7SkpPeROvhc_MO9LH-Yq6rv8p9kVe7Yf1Z9SC9sppttWTi54IrIOM5k68YDANoicMuKFdtTq-21nDjh17zDceOp1EJho4s6vpIidyJAQKqb8AX4EQFLmzSY25_8i5mxMs7CRocqFxoghE8yXny5mcgG0CHzqS9vnRQ897msAN8RB2-gv1lwz-Y_e_DSujH0-XICCpHmVhrdFZWfdjZpyepFHdhUijijaaksrJRuvd0Ar3UeZtKimYk0svFAyJTCfay__Ab-Qs9Kf6USpwx1TqJDPgBirdOzxyj9B7UdmaFFMVYbnZtY6gsgwkSdsYHWTJdp8nE70KATsVC2nTQVpf_ue8WfwSMVi0sDgp2MywDs8umG3BssRSFCbl-GYgZhJeMkMKtp4tBOnQbm0XVmMplx4cGOa9vqIYHlyBQhjpMU2U8D6iUWHFVu481QapdNsjem0r7EPLWmAeV4OH2Txmx7zf3qgd-uEjySrJ5yc5nZ9PQjhLFrz_AOPgM8YvQ01MYpFfjoZBfrsV1Kbcv=w1024-h768-no?authuser=0">
+                        <img src="https://lh3.googleusercontent.com/2Xdqf9OxpVEGN-utMwo_EQtItHtsqO02XfDSkerIRRkBBW1WyFuqmZsBRyWFooTbkFMD29P2HtuzCwVKl3axL3AmPJD-oQqZmXRq_7QeU3Gvqk2JVj3Ma2-14tgtzOa1KHBa0udOy1r8mRSSgjtz9c3K-ZeQODRTA9WiZ1cZGhDu-bv2GtEG6Ii5MSfKjvEtZRub4H7SkpPeROvhc_MO9LH-Yq6rv8p9kVe7Yf1Z9SC9sppttWTi54IrIOM5k68YDANoicMuKFdtTq-21nDjh17zDceOp1EJho4s6vpIidyJAQKqb8AX4EQFLmzSY25_8i5mxMs7CRocqFxoghE8yXny5mcgG0CHzqS9vnRQ897msAN8RB2-gv1lwz-Y_e_DSujH0-XICCpHmVhrdFZWfdjZpyepFHdhUijijaaksrJRuvd0Ar3UeZtKimYk0svFAyJTCfay__Ab-Qs9Kf6USpwx1TqJDPgBirdOzxyj9B7UdmaFFMVYbnZtY6gsgwkSdsYHWTJdp8nE70KATsVC2nTQVpf_ue8WfwSMVi0sDgp2MywDs8umG3BssRSFCbl-GYgZhJeMkMKtp4tBOnQbm0XVmMplx4cGOa9vqIYHlyBQhjpMU2U8D6iUWHFVu481QapdNsjem0r7EPLWmAeV4OH2Txmx7zf3qgd-uEjySrJ5yc5nZ9PQjhLFrz_AOPgM8YvQ01MYpFfjoZBfrsV1Kbcv=w1024-h768-no?authuser=0"
+                            alt="Marvel é bom" width="600" height="400">
+                    </a>
+                    <div class="desc">Marvel é bom!</div>
+                </div>
+
+            </div>
+            </br>
+            <div class="clearfix"></div>
+            <p>⠀⠀⠀⠀⠀⠀⠀⠀</p>
+            <p>⠀⠀⠀⠀⠀⠀⠀⠀</p>
+            <p>⠀⠀⠀⠀⠀⠀⠀⠀</p>
+        </div>
+        <br>
+        <br>
+    </div>
+    <div style="padding:6px;" class="receitas">
+        <br>
+        <h2 class="tituloReceitas" style="text-align: center;">Receitas que eu curto :)</h2>
+
+        <br>
+        <br>
+        <table style="margin: auto; border: 5px solid gold; padding: 50px;">
+            <tr>
+                <td><img width="350px"
+                        src="https://4.bp.blogspot.com/-9gFQoJ4IlAE/WyLSu9fqNhI/AAAAAAAAND0/3Ab_DDh-CO0e7D3VWiND0MrkFLGt5nT-ACLcBGAs/s1600/strogonoff-de-frango.jpg"
+                        alt=""></td>
+                <td><a target="_blank" href="receita.html">Clique aqui para ver a receita</a></td>
+            </tr>
+
+            <tr>
+                <td><img width="350px" src="https://i.ytimg.com/vi/jm1A-KZ2Dpo/hqdefault.jpg" alt=""></td>
+                <td><a target="_blank" href="receita2.html">Clique aqui para ver a receita</a></td>
+            </tr>
+
+            <tr>
+                <td><img width="350px"
+                        src="https://1.bp.blogspot.com/-sR7YebGXlIo/WooQkGprUkI/AAAAAAAAMK8/xpYfkeuYhB4OwQ3Jhtu3vtUExWR8tiEUACLcBGAs/s1600/conchiglione-recheado%2B%25281%2529.jpg"
+                        alt=""></td>
+                <td><a target="_blank" href="receita3.html">Clique aqui para ver a receita</a></td>
+            </tr>
+        </table>
+        <br><br>
+    </div>
+    </div>
+</body>
+<footer>
+    <div class="linhaDoTempo">
+        <br>
+        <br>
+        <br>
+        <h2>Linha do tempo de referencias culturais minhas :O</h2>
+        <br>
+        <br>
+        <br>
+        <form method="get" target="_blank" action="timeline.html">
+            <button type="submit">Ver Linha do tempo</button>
+        </form>
+        <p>⠀⠀⠀⠀⠀⠀⠀⠀</p>
+        <p>⠀⠀⠀⠀⠀⠀⠀⠀</p>
+        <p>⠀⠀⠀⠀⠀⠀⠀⠀</p>
+        <p>⠀⠀⠀⠀⠀⠀⠀⠀</p>
+        <p>⠀⠀⠀⠀⠀⠀⠀⠀</p>
+        <p>⠀⠀⠀⠀⠀⠀⠀⠀</p>
+</footer>
+
+</html>
