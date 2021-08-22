@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guilherme Briggs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Rodrigo Silva</title>
 </head>
 <style>
+    *{
+        font-family: 'Poppins', sans-serif;
+    }
     body {
-        background-image: url("https://wallpapercave.com/wp/wp8207303.jpg");
+        background-image: url("https://wallpaperaccess.com/full/2037839.jpg");
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -39,7 +45,7 @@
 
     th,
     form {
-        background-color: #04AA6D;
+        background-color: brown;
         color: white;
     }
 
@@ -48,35 +54,39 @@
     }
 
     form {
-        background-color: #04AA6D;
-        color: black;
+        background-color: brown;
+        color: white;
     }
 
     form table {
         border: none;
     }
+
+    textarea{
+        max-width: 400px;
+        max-height: 200px;
+        min-width: 100px;
+        min-height: 50px;
+    }
 </style>
 
 <body>
-    <h1>Personalidades que admiro - Guilherme Briggs</h1>
+    <h1>Personalidades que admiro - Rodrigo Silva</h1>
     <br>
     <table>
         <tr>
-            <th colspan="2">Guilherme Briggs</th>
-            <td rowspan="4" class="grey">Guilherme Briggs nasceu em 1970, na cidade do Rio de Janeiro, filho de Suelly
-                Neves e Henrique Briggs. Durante a sua infância, Guilherme criava com seu pai personagens e histórias em
-                um antigo gravador, numa espécie de radioteatro caseiro. Guilherme se refere ao pai como seu grande
-                incentivador para as artes.</td>
+            <th colspan="2">Rodrigo Silva</th>
+            <td rowspan="4" class="grey">Rodrigo Silva possui graduação em Teologia pelo Instituto Adventista de Ensino do Nordeste (1992), graduação em Filosofia a pela Unifai (1999), mestrado em Teologia Patrística pela Faculdade Jesuíta de Filosofia a e Teologia (1996), especialização em Arqueologia pela Universidade Hebraica de Jerusalém (1998), doutorado em Teologia Bíblica pela Pontifícia Faculdade de Teologia N. S. Assunção (2001) – atualmente vinculada à PUC -SP –, doutorado em Arqueologia Clássica pela Universidade de São Paulo (2012) e estudos pós-doutorais com concentração em Arqueologia Bíblica pela Andrews University, EUA (2008). É professor de Teologia e Arqueologia do Centro Universitário Adventista de São Paulo (Unasp), curador do Museu de Arqueologia da Unasp e apresentador do documentário semanal Evidências, transmitido pela TV Novo Tempo.</td>
             <td rowspan="4">
                 <img width="300px"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/GuilhermeBriggs.jpg/420px-GuilhermeBriggs.jpg"
+                    src="https://files.adventistas.org/noticias/pt/2020/01/rodrigosilva1.jpg"
                     alt="">
             </td>
         </tr>
 
         <tr>
             <th>Nome Completo:</th>
-            <td>Guilherme Neves Briggs</td>
+            <td>Rodrigo Pereira Silva</td>
         </tr>
 
         <tr>
@@ -86,7 +96,7 @@
 
         <tr>
             <th>Ocupação:</th>
-            <td>Ator, Dublador, Diretor de dublagem, locutor, tradutor, desenhista, youtuber, blogueiro</td>
+            <td>Arqueólogo, teólogo, Professor da UNASP e curador do Museu de Arqueologia Bíblica da UNASP.</td>
         </tr>
     </table>
     <br>
@@ -101,29 +111,29 @@
                 <tbody>
                     <tr>
                         <td>
-                            <label>Qual é o seu rank de melhores personagens que você já duublou?</label>
+                            <label>Uma passagem da Bíblia que fala muito sobre você</label>
                         </td>
                         <td>
-                            <textarea id="texto" name="texto"></textarea>
+                            <textarea maxlength="1000" onmousewheel="true" id="texto" name="texto"></textarea>
                         </td>
                     </tr>
 
-                    <tr>
+                    <tr style="color: black;">
                         <td>
-                            <p>Para você quem tem uma voz melhor?</p>
+                            <p>Qual você prefere?</p>
                         </td>
-                        <td>
+                        <td >
                             <input type="radio" id="chocolate" name="comida" value="chocolate" checked="">
-                            <label for="chocolate">Alexandre Moreno</label>
+                            <label for="chocolate">Dar aula na UNASP</label>
 
                             <input type="radio" id="coxinha" name="comida" value="coxinha">
-                            <label for="coxinha">Percy</label>
+                            <label for="coxinha">Escavar lugares citados na Bíblia</label>
                         </td>
                     </tr>
 
                     <tr>
                         <td>
-                            <label for="avatar">Escolha uma foto sua com outros dubladores:</label></td>
+                            <label>Escolha uma foto de sua viagem favorita:</label></td>
                         <td>
                             <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
                         </td>

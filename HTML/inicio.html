@@ -5,42 +5,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <title>Igor Vinnycius</title>
 </head>
 <style>
-    .Titulo1 {
-        font-size: 60px;
-    }
-
     div.gallery {
-        border: 1px solid #ccc;
-    }
-
-    div.gallery:hover {
-        border: 1px solid #777;
+        margin: 5px;
+        padding: 0;
     }
 
     div.gallery img {
-        width: 100%;
+        width: 90%;
         height: auto;
+        padding: 10px;
     }
 
     div.desc {
-        padding: 15px;
         text-align: center;
+        margin: 0;
+        padding: 50px;
     }
 
     * {
+        margin: 0;
         box-sizing: border-box;
         color: white;
-        margin: auto;
-        font-family: Verdana;
+        font-family: 'Poppins', sans-serif;
     }
 
     .responsive {
-        padding: 0 6px;
         float: left;
-        width: 24.99999%;
+        width: 25vw;
         background-color: dodgerblue;
     }
 
@@ -49,33 +46,69 @@
     }
 
     h2 {
-        margin: auto;
+        margin: 0;
     }
 
     li {
-        font-size: 20px;
+        font-size: 15px;
+    }
+
+    .Titulo1 {
+        margin-top: 5px;
+        font-size: 60px;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .tapresentacao {
+        grid-column: 1;
+        grid-row: 2;
+        align-self: flex-end;
+        margin-bottom: 20px;
+    }
+
+    .trescoisas {
+        grid-column: 2;
+        grid-row: 3;
+        display: flexbox;
+        width: 30vw;
+        justify-self: flex-end;
+        align-self: center;
     }
 
     .Apresentacao {
-        font-size: 15px;
-        }
-
-    .TituloGaleria {
-        margin: auto;
-        padding: 50px;
-        font-size: 40px;
+        display: flex;
+        font-size: 17px;
+        grid-column: 1;
+        grid-row: 3;
+        width: 50vw;
     }
 
     .inicio {
         padding: 50px;
-        margin: auto;
+        margin: 0;
         background-image: url('https://lh3.googleusercontent.com/jUE7u7L04s0_SxoudV4N07C5vc8S-6q-lI6TwQWGkY1cocq4TIp_X3jSFF5AEbhRb5G4W9keiFQbdqzPBiaBA7xWoaMT1s4vVW3YlqoQnmOKfTkW6oPClETmKnBD2weHu8s9ojbjf1T2aemECdxGoznp2V-TBegR3-gC2yC-88eeFYOU377oFIlSyHbNM4GDn6UKwpDQI1HUFywC3oAOMfrh9muAIJv9WvDLXuyzOZdXXfmSXlyYVWZWbByIMDvcOmg-4kiQZ4_SYI2y1J279encCsxgkqLuFTE3SH3LaLJIw8hu7D6SKBsay14y8fZqJbWb8mfMRJBlj3HtFEhNOXE-vX01NlMSsev33vP-der8gpuMHnOd-sHv0ocdgGVHnlNkmd7wZE1yAUgeyQyCgU6yzQJ68QOvGmcmNc0PUJtBKT_wNt-mBoivX6zyKQLV_2JDRJcfVS0dcyQYkXK-w1ovGDseY-q53QFFrbmC499P-2ugBlEle_scVSZTucDIVJVQnBeW5CU-DGGNECq7AYv7AA9AcXZsRtId2gsXswh5dF3PR6Q9WhGQO7fmH6F9gETPsr_hFiM2pWT_HC5Xfcg3QiV825_XS-aDTilqRAlP0FicLAXx2tSfukUcKfgBg5q6dBurYiW-iB7yniYyDUwObeL-uJWRFZZwPt4HS-uJ4xpe7-YNNMQ1uwtRvtlpYV76HP2djWsJuJ2rnhHjfIiZ=w530-h220-no?authuser=0');
         background-repeat: no-repeat;
         background-size: cover;
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 45vw 45vw;
+        grid-template-rows: 15vh 17vh 40vh;
+        grid-auto-flow: column;
+    }
+
+    .TituloGaleria {
+        margin: 0;
+        padding: 50px;
+        font-size: 20px;
     }
 
     .Content {
         background-color: dodgerblue;
+        width: 100vw;
+        margin: 0;
+        justify-content: center;
     }
 
     .tituloReceitas {
@@ -86,14 +119,18 @@
     .receitas {
         background-color: darkcyan;
         padding: 6px;
+        margin: auto;
+        align-content: center;
+        width: 100vw;
     }
 
     .linhaDoTempo {
         background-color: rgb(6, 78, 126);
-        margin: auto;
+        margin: 0;
         padding: auto;
         align-items: center;
         text-align: center;
+        width: 100vw;
     }
 
     button {
@@ -104,14 +141,14 @@
         text-align: center;
         font-size: 16px;
         margin: 4px 2px;
-        opacity: 0.6;
-        transition: 0.3s;
+        transition: 0.7s;
     }
 
     button:hover {
         opacity: 1;
         color: dodgerblue;
         background-color: white;
+        cursor: pointer;
     }
 
     @media only screen and (max-width: 700px) {
@@ -137,11 +174,8 @@
         overflow: hidden;
         background-color: rgb(20, 85, 150);
         position: fixed;
-        /* Set the navbar to fixed position */
         top: 0;
-        /* Position the navbar at the top of the page */
         width: 100%;
-        /* Full width */
     }
 
     /* Links inside the navbar */
@@ -158,7 +192,11 @@
     .navbar a:hover {
         background: #ddd;
         color: black;
-        transition: 0.5s;
+        transition: 0.7s;
+    }
+
+    a {
+        text-decoration: none;
     }
 </style>
 <header>
@@ -175,7 +213,8 @@
         <br>
         <h1 class="Titulo1">Um pouco de mim</h1>
         <br>
-        <h2>Apresentação</h2>
+        <h2 class="tapresentacao">Apresentação</h2>
+        <br>
         <p class="Apresentacao">Olá, eu me chamo Igor Vinnycius, sou um garoto de 17 anos, Cristão, morador de Guarulhos
             desde pequeno, amo muitos lugares de São Paulo, tanto que já pensei em fazer histórias sobre esses lugares,
             mas até agora só tenho ideias em mente. Estudo na Etec de Guarulhos, e agora no PROA também!! uhuuuu! graças
@@ -184,32 +223,36 @@
             trabalhar com o front-end mesmo ou até o back-end, amo dublagens, amo designs, amo contemplar a natureza, o
             céu, as estrelas, acho os detalhes da natureza maravilhosos. </p>
         <br><br>
-
-        <p style="font-weight: bold; font-size: large;">3 coisas importantes sobre mim</p>
-        <br>
-        <ol>
-            <li>
-                Penso que pelo fato de eu ser cristão já dá para saber um pouco de mim kkkkk
-            </li>
+        <div class="trescoisas">
+            <p style="font-weight: bold; font-size: large; text-align: center;">3 coisas importantes sobre mim</p>
             <br>
-            <li>
-                Amo ter companhia, para conversar, jogar conversa fora, falar sobre filmes, séries, jogos, até novelas
-                kkkkk, se bem que não assisto muito
-            </li>
-            <br>
-            <li>
-                Amo dublagens, de verdade, amo mesmo, acho incrível esse trabalho. Atuar é muito legal e interessante,
-                queria aprender um dia.
-            </li>
-        </ol>
+            <ol>
+                <li>
+                    Penso que pelo fato de eu ser cristão já dá para saber um pouco de mim kkkkk
+                </li>
+                <br>
+                <li>
+                    Amo ter companhia, para conversar, jogar conversa fora, falar sobre filmes, séries, jogos, até
+                    novelas
+                    kkkkk, se bem que não assisto muito
+                </li>
+                <br>
+                <li>
+                    Amo dublagens, de verdade, amo mesmo, acho incrível esse trabalho. Atuar é muito legal e
+                    interessante,
+                    queria aprender um dia.
+                </li>
+            </ol>
+        </div>
         <br>
     </div>
     <div class="Content">
         <div class="TituloGaleria">
             <h2>Galeria</h2>
+            <br>
             <h4>Algumas fotinhas que até que não estão tão ruim assim kkkk</h4>
         </div>
-        <div>
+        <div class="Galeria">
             <div class="responsive">
                 <div class="gallery">
                     <a target="_blank"
@@ -256,9 +299,7 @@
             </div>
             </br>
             <div class="clearfix"></div>
-            <p>⠀⠀⠀⠀⠀⠀⠀⠀</p>
-            <p>⠀⠀⠀⠀⠀⠀⠀⠀</p>
-            <p>⠀⠀⠀⠀⠀⠀⠀⠀</p>
+            <p style="text-align: center;">⠀⠀⠀⠀⠀⠀⠀⠀</p>
         </div>
         <br>
         <br>
@@ -305,12 +346,7 @@
         <form method="get" target="_blank" action="timeline.html">
             <button type="submit">Ver Linha do tempo</button>
         </form>
-        <p>⠀⠀⠀⠀⠀⠀⠀⠀</p>
-        <p>⠀⠀⠀⠀⠀⠀⠀⠀</p>
-        <p>⠀⠀⠀⠀⠀⠀⠀⠀</p>
-        <p>⠀⠀⠀⠀⠀⠀⠀⠀</p>
-        <p>⠀⠀⠀⠀⠀⠀⠀⠀</p>
-        <p>⠀⠀⠀⠀⠀⠀⠀⠀</p>
+        <br><br><br><br><br><br><br><br>
 </footer>
 
 </html>

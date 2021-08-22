@@ -5,9 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <title>Guilherme Briggs</title>
 </head>
 <style>
+    *{
+        font-family: 'Poppins', sans-serif;
+    }
     body {
         background-image: url("https://wallpapercave.com/wp/wp8207303.jpg");
         background-repeat: no-repeat;
@@ -55,6 +61,14 @@
     form table {
         border: none;
     }
+
+    textarea{
+        max-width: 400px;
+        max-height: 200px;
+        min-width: 100px;
+        min-height: 50px;
+    }
+
 </style>
 
 <body>
@@ -104,7 +118,7 @@
                             <label>Qual é o seu rank de melhores personagens que você já duublou?</label>
                         </td>
                         <td>
-                            <textarea id="texto" name="texto"></textarea>
+                            <textarea maxlength="1000" onmousewheel="true" id="texto" name="texto"></textarea>
                         </td>
                     </tr>
 
@@ -123,7 +137,7 @@
 
                     <tr>
                         <td>
-                            <label for="avatar">Escolha uma foto sua com outros dubladores:</label></td>
+                            <label>Escolha uma foto sua com outros dubladores:</label></td>
                         <td>
                             <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
                         </td>

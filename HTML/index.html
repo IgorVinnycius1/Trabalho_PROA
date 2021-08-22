@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Landing Pages</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<style>
+body {
+  font-family: 'Poppins', sans-serif;
+  padding: 20vh;
+  background-color: dodgerblue;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+
+.open-button {
+  background-color: white;
+  color: dodgerblue;
+  font-size: medium;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 70vh;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid white;
+  width: 280px;
+  height: 60px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  position: fixed;
+  bottom: 2%;
+  top: 40vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  color: black;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.open-button:hover{
+  background-color: dodgerblue;
+  color: white;
+  transition: 0.2s;
+  border: 2px white;
+}
+
+</style>
+<body>
+
+<h2>Landing Pages</h2>
+<p>Landing Page é uma página utilizada para conseguir clientes e não apenas visitantes em sua página. Com ela você consegue algumas informações de clientes fornecidas pelos mesmos</p>
+<p>Essa página é um exemplo de Landing Page</p>
+
+<button class="open-button" onclick="openForm()">Open Form</button>
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1 style="font-size: 20px; color: dodgerblue;">Quer baixar o ebook sobre Landing Pages? Insira os campos abaixo</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Insira seu melhor Email" name="email" required>
+
+    <label for="psw"><b>Número para contato</b></label>
+    <input type="text" placeholder="Insira seu número" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+</body>
+</html>
