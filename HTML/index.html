@@ -107,6 +107,16 @@ body {
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+.open-button{
+  position: fixed;
+  bottom: 2%;
+  top: 80vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  color: black;
+  margin-left: 250px;
+}
 
 .open-button:hover{
   background-color: dodgerblue;
@@ -122,29 +132,25 @@ body {
 <p>Landing Page é uma página utilizada para conseguir clientes e não apenas visitantes em sua página. Com ela você consegue algumas informações de clientes fornecidas pelos mesmos</p>
 <p>Essa página é um exemplo de Landing Page</p>
 <br>
-<p style="font-size: medium; color: black;">Clique no ícone abaixo para baixar o pdf</p>
-
-<a href="https://s3.amazonaws.com/rd-marketing-objects/emkt_ebook_landing_pages_na_pratica/landing-pages.pdf" download>
-  <img src="https://lh3.googleusercontent.com/lCbc7FCByUJE6oDZ5dOjI0sKg4nBbo0eftPL-3GxUGcRWw37jVTsIzb4hZiyJK6hjn5RSb5S4oWHfV-JJ9s1dv1ier7qCsvFqzCsLwk2X8QOvUzBnrNENvkIMjG38dmUINVPnJjbl9f2tpv3A8xq5oI1iWLmsRZa9OM9l92SvAATrPQMwzVuHsRcIDpM_BMtFxaNXpOo33UgWLz_2RAtUITdUKd43MV7k3730G0HsN-7ZL55pJq4L6dhSf2NtWFsgvndrChNb8RyjY4ORqH9-kPwmruWpc9E29J36_w4iC4Xi834F4xB8QRpv9GcXI-cpxHM9fSHovyGMgsd3dNR_Wygu-4JFnB6kvXt3RozTTdDHTGDoOTiu91Aqd0N_XtttSgp7mKRs10FgUBgyZD-WpTFwrp2lp8x9mOEKF6bhx1vygBet_ckASfr1qEqogHdrmPGX38WgwPoWdVw14YWp_wpq3zBPxfSB9PVXeFEecK2ztnGllo_juFACR-skLsosZwJQOzgO6bP6d5KpW_jDuUbKWluX5ZZZUjK-zXJAf_MUj7DIOifC84iy44AbTL_JcPwiKB70eUTOemmhFw_EXs_U6TV4o8_BbBlQhyuQzy-2psQM4f1L6iZ5tfwYGPPkko0c_FxPEq6sSPgdBElOuZzn797j6MZYQhXVj7T4XvZpxYLfOFK5oFOweU1wl52iNKzBvPlG34_xPOV4kYAhNVA=s256-no?authuser=0" alt="W3Schools" height="50px">
-</a>
+<p style="color: black;"><b> Para saber mais sobre Landing Pages, cadastre-se no formulário</b></p>
+<br>
 </div>
-<!-- <button class="open-button" onclick="openForm()">Open Form</button>-->
+
+<button class="open-button" onclick="openForm()">Open Form</button>
 
 <div class="form-popup" id="myForm">
-  <form class="form-container">
+  <form class="form-container" action="https://s3.amazonaws.com/rd-marketing-objects/emkt_ebook_landing_pages_na_pratica/landing-pages.pdf">
     <h1 style="font-size: 20px; color: dodgerblue;">Quer baixar o ebook sobre Landing Pages? Insira os campos abaixo</h1>
 
     <label for="email"><b>Email</b></label>
-    <input type="mail" placeholder="Insira seu melhor Email" name="email" value="user@gmail.com" required>
+    <input type="mail" placeholder="Insira seu melhor Email" name="email" required>
 
     <label for="num"><b>Número para contato</b></label>
     <input type="text" name="email" placeholder="Insira seu número" required>
 
-    <label for="num"><b></b></label>
-    <input type="text" name="email" placeholder="" required style="height: 0px; width: 0px; background-color: white;">
+    <button type="submit" class="btn">Login</button>
 
-
-    <button type="submit" class="btn" onclick="closeForm()">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
   </form>
 </div>
 
