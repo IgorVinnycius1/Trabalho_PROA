@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino de Posicionamento</title>
+</head>
+<style>
+    *{
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    .Green {
+        background-color: rgb(101, 226, 101);
+        grid-column: 1 / 4;
+        grid-row: 1;
+        padding: 20px;
+    }
+
+    .Yellow {
+        background-color: rgb(241, 241, 99);
+        grid-column: 1;
+        grid-row: 2;
+        padding: 20px;
+    }
+
+    .Red {
+        background-color: rgb(236, 99, 99);
+        grid-column: 2;
+        grid-row: 2;
+        padding: 20px;
+    }
+
+    .Blue {
+        background-color: rgb(66, 162, 241);
+        grid-column: 3;
+        grid-row: 2 / 4;
+        padding: 20px;
+    }
+
+    .Orange {
+        background-color: rgb(255, 197, 89);
+        grid-column: 1 / 3;
+        grid-row: 3;
+        padding: 20px;
+    }
+
+    .branco {
+        background-color: white;
+        width: 60px;
+        height: 40px;
+        align-self: center;
+        justify-self: center;
+        text-align: justify;
+    }
+
+    .textb{
+        text-align: left;
+        margin-left: 2px;
+    }
+
+    .blocoa{
+        display: grid;
+        grid-template-columns: 40px 60px;
+        grid-template-rows: 30px 30px;
+        align-content: center;
+        justify-content: center;
+        column-gap: 30px;
+        row-gap: 25px;
+        align-items: center;
+    }
+
+    .Tudo{
+        display: grid;
+        grid-template-rows: 30vh 30vh 30vh;
+        grid-template-columns: 33vw 33vw 30vw;
+        column-gap: 15px;
+        row-gap: 15px;
+        align-content: stretch;
+        padding: 12px;
+    }
+
+    body{
+        margin: 0;
+    }
+</style>
+
+<body>
+    <div class="Tudo">
+        <div class="Green">
+            <p>GREEN</p>
+        </div>
+        <div class="Yellow">
+            <p>YELLOW</p>
+            <div class="blocoa">
+                <div class="branco"><p class="textb">1</p></div>
+                <div class="branco"><p class="textb">2</p></div>
+                <div class="branco"><p class="textb">3</p></div>
+                <div class="branco"><p class="textb">4</p></div>
+            </div>
+        </div>
+        <div class="Red">
+            <p>RED</p>
+            <div class="blocoa">
+                <div class="branco"><p class="textb">A</p></div>
+                <div class="branco"><p class="textb">B</p></div>
+                <div class="branco"><p class="textb">C</p></div>
+                <div class="branco"><p class="textb">D</p></div>
+            </div>
+        </div>
+        <div class="Blue">
+            <p>BLUE</p>
+        </div>
+        <div class="Orange">
+            <p>ORANGE</p>
+        </div>
+    </div>
+</body>
+
+</html>

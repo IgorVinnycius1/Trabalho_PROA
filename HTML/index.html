@@ -10,10 +10,23 @@
 
 <style>
 body {
+  display: flex;
   font-family: 'Poppins', sans-serif;
-  padding: 20vh;
-  background-color: dodgerblue;
+  background-image: url("https://lh3.googleusercontent.com/83RhKPn7F5y-XFjHoOCHW_bjzK_ELyyg9GcyuE_VdUQbofRKyoVZPXYbtNianXS0u3O0-siOcfBLlg0V0HL_7N3NOE91NSDlaS6NbXcvurQ3JufnG7XiwJeS-Zc407k9pNsN79bcheZmabkVEIdmgF6k0Wxl76sc9_Z0iVaIkaK5vACRmqHyJ-dbKAFu1xEAM6Sjtg3QBmBafQu-iPI1-iOkzbqCRXuB_vFpnrup1xyN-j8QBB8QUcitS8_NddZJiA88w6APFDzEICT0ZPKtCsmUmdtqq03JgNsrDUppcaHWYOi4RQPdEWNTsywbEBQlDOlWfSvQM48VK1QqAv1Mc0dgdXvQF6VQgQa9E9q4VT0VN6IS19yneLVgDc-xNrNFiOsYK8URALkhWOGKfBJye2OLhqoyOSnv7O4F0xPLQwbp2k644QVIhcJM67evB81rkQEBLRKYQQjE5ZbIBH_ZSb62QNhprrj9TZVgrK_5tqr7KPpu0lDyuDedUcSE5hzBrO5_x0y8VDZ3xosyuyIgWg8WH_2jGvdjOtMcD4jatYQUCPpWJMDpbcC20qFo1ymFSrHgToz5fshCZ9sb4AVTdhg7ReA9SleR0xcWkdyWnMKNs-TA0QXqrUDL_Hje5JBXtaZ4XLjDlE0NuOU5ZHejUGGt6CX7KtuEZ9GK6KBGo-cKOjrCoW1ALuxCUDHbRVaA6darAJJ6Iv-iMCEQ37y2oNFm=w1388-h780-no?authuser=0");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  margin-left: 500px;
+}
+
+.texto{
+  max-width: 600px;
+  text-align: center;
+  align-self: center;
+  font-size: 20px;
 }
 
 * {
@@ -48,6 +61,7 @@ body {
   transform: translate(-50%, -50%);
   z-index: 9;
   color: black;
+  margin-left: 250px;
 }
 
 /* Add styles to the form container */
@@ -58,7 +72,7 @@ body {
 }
 
 /* Full-width input fields */
-.form-container input[type=text], .form-container input[type=password] {
+.form-container input[type=text], .form-container input[type=password], .form-container input[type=mail] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -67,7 +81,7 @@ body {
 }
 
 /* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+.form-container input[type=text]:focus, .form-container input[type=password]:focus, .form-container input[type=mail]:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -103,25 +117,34 @@ body {
 
 </style>
 <body>
-
+<div class="texto">
 <h2>Landing Pages</h2>
 <p>Landing Page é uma página utilizada para conseguir clientes e não apenas visitantes em sua página. Com ela você consegue algumas informações de clientes fornecidas pelos mesmos</p>
 <p>Essa página é um exemplo de Landing Page</p>
+<br>
+<p style="font-size: medium; color: black;">Clique no ícone abaixo para baixar o pdf</p>
 
-<button class="open-button" onclick="openForm()">Open Form</button>
+<a href="https://s3.amazonaws.com/rd-marketing-objects/emkt_ebook_landing_pages_na_pratica/landing-pages.pdf" download>
+  <img src="https://lh3.googleusercontent.com/lCbc7FCByUJE6oDZ5dOjI0sKg4nBbo0eftPL-3GxUGcRWw37jVTsIzb4hZiyJK6hjn5RSb5S4oWHfV-JJ9s1dv1ier7qCsvFqzCsLwk2X8QOvUzBnrNENvkIMjG38dmUINVPnJjbl9f2tpv3A8xq5oI1iWLmsRZa9OM9l92SvAATrPQMwzVuHsRcIDpM_BMtFxaNXpOo33UgWLz_2RAtUITdUKd43MV7k3730G0HsN-7ZL55pJq4L6dhSf2NtWFsgvndrChNb8RyjY4ORqH9-kPwmruWpc9E29J36_w4iC4Xi834F4xB8QRpv9GcXI-cpxHM9fSHovyGMgsd3dNR_Wygu-4JFnB6kvXt3RozTTdDHTGDoOTiu91Aqd0N_XtttSgp7mKRs10FgUBgyZD-WpTFwrp2lp8x9mOEKF6bhx1vygBet_ckASfr1qEqogHdrmPGX38WgwPoWdVw14YWp_wpq3zBPxfSB9PVXeFEecK2ztnGllo_juFACR-skLsosZwJQOzgO6bP6d5KpW_jDuUbKWluX5ZZZUjK-zXJAf_MUj7DIOifC84iy44AbTL_JcPwiKB70eUTOemmhFw_EXs_U6TV4o8_BbBlQhyuQzy-2psQM4f1L6iZ5tfwYGPPkko0c_FxPEq6sSPgdBElOuZzn797j6MZYQhXVj7T4XvZpxYLfOFK5oFOweU1wl52iNKzBvPlG34_xPOV4kYAhNVA=s256-no?authuser=0" alt="W3Schools" height="50px">
+</a>
+</div>
+<!-- <button class="open-button" onclick="openForm()">Open Form</button>-->
 
 <div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
+  <form class="form-container">
     <h1 style="font-size: 20px; color: dodgerblue;">Quer baixar o ebook sobre Landing Pages? Insira os campos abaixo</h1>
 
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Insira seu melhor Email" name="email" required>
+    <input type="mail" placeholder="Insira seu melhor Email" name="email" value="user@gmail.com" required>
 
-    <label for="psw"><b>Número para contato</b></label>
-    <input type="text" placeholder="Insira seu número" name="psw" required>
+    <label for="num"><b>Número para contato</b></label>
+    <input type="text" name="email" placeholder="Insira seu número" required>
 
-    <button type="submit" class="btn">Login</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    <label for="num"><b></b></label>
+    <input type="text" name="email" placeholder="" required style="height: 0px; width: 0px; background-color: white;">
+
+
+    <button type="submit" class="btn" onclick="closeForm()">Login</button>
   </form>
 </div>
 
@@ -131,6 +154,7 @@ function openForm() {
 }
 
 function closeForm() {
+
   document.getElementById("myForm").style.display = "none";
 }
 </script>
